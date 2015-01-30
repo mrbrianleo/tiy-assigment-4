@@ -1,0 +1,161 @@
+body {
+  width: 100%;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;   
+}
+
+p {
+        display: inline-block;
+        padding-left: 10px;
+      }
+
+header {
+  // font-family: Oswald, Helvetica, Arial, sans-serif;
+  background: url(img/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // border: 1px solid red;
+  height: 500px;
+  color: #083452;
+  position: relative;
+
+  .logonav {
+    width: 80%;
+    margin: auto;
+    border: 3px solid red;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      float: left;
+    }
+
+    p {
+      float: left;
+    }
+
+    ul {
+      display: inline;
+      float: right;
+
+      li {
+        padding-left: 5px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .headline {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    p {
+      margin-top: 0;
+      font-size: .8em;
+    }
+
+    h2 {
+      color: white;
+      font-size: 6em;
+      text-align: center;
+      text-shadow: 2px 2px 5px black;
+      margin: 0;
+      line-height: 100px;
+      position: relative;
+    }
+  }
+}
+
+.content {
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  color: #083452;
+
+  .left {
+    background: red;
+    width: calc(~'100% - 250px');
+    float: left;
+  }
+
+  .right {
+    background: green;
+    width: 250px;
+    float: right;
+  }
+}
+
+
+footer {
+  border-top: 1px solid #ccc;
+  background: white;
+  clear: both;
+
+  h1 {
+    text-align: center;
+    font-size: 4em;
+    color: #083452;
+  }
+
+  .more-posts {
+      background: black;
+      max-height: 100%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+
+        * {
+          font-size: 16px;
+        }
+      
+        li {
+          display: inline-block;
+          text-align: center;
+          width: 25%;
+          min-width: 150px;
+          
+          img {
+            width: 100%;
+          }
+        } 
+      }  
+  }
+
+  .footernav {
+    height: 200px;
+    background: #083452;
+    color: #a2b2bd;
+
+    .footernav-contact {
+      padding: 20px;
+      width: 80%;
+      margin: auto;
+      font-size: .8em;
+
+      img {
+        float: left;
+      }
+
+      ul {
+        float: right;
+
+        li {
+          border: none;
+          padding: 0 5px;
+          display: inline-block;
+          border-left: 1px solid #a2b2bd;
+
+          &:first-child {
+            border-left: none;
+          }
+        }  
+      }
+    }
+  }
+}
