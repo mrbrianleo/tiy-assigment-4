@@ -1,5 +1,8 @@
-@dark-color: #002642;
+@dark-blue: #08344f;
+@med-blue: #106fb3;
 @white: #fff;
+@light-gray: #a2b2bd;
+@dark-gray: #5d676e;
 
 body {
   width: 100%;
@@ -13,21 +16,16 @@ p {
 
 figcaption {
   text-align: right;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: .8em;
 }
 
 header {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
   background: url(img/header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // border: 1px solid red;
-  // height: 500px;
-  color: @dark-color;
+  color: @dark-blue;
   position: relative;
 
   .logonav {
@@ -44,11 +42,15 @@ header {
 
     p {
       float: left;
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
     }
 
     ul {
       display: inline;
       float: right;
+      padding: 0;
+      margin: 13px;
+      width: 150px;
 
       li {
         padding-left: 5px;
@@ -61,9 +63,6 @@ header {
 
   .headline {
     position: relative;
-    // top: 35%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     padding: 12% 0;
     text-align: center;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -77,7 +76,7 @@ header {
       color: white;
       font-size: 6em;
       text-align: center;
-      text-shadow: 2px 2px 10px @dark-color;
+      text-shadow: 2px 2px 10px @dark-blue;
       margin: 0;
       line-height: 100px;
       position: relative;
@@ -90,27 +89,99 @@ header {
   width: 65%;
   margin: auto;
   padding: 5% 30px;
-  color: @dark-color;
+  color: @dark-blue;
 
   .left {
-    // background: red;
     width: calc(~'90% - 250px');
     float: left;
 
     h1 {
       margin: 0;
       font-size: 50px;
+      font-family: Oswald, Helvetica, Arial, sans-serif;
     }
 
+    .meta {
+      padding: 5px 0;
+    }
     .author {
       font-size: 10px;
-      border: 1px solid red;
+      display: inline-block;
+      color: #106fb3;
+      height: 25px;
+      line-height: 25px;
+
+      img {
+        width: 25px;
+      }
+
+      h4 {
+        float: left;
+        padding: 0;
+        margin: 0;
+      }
+
+      span {
+        color: #a2b2bd;
+        float: left;
+        padding-left: 10px;
+
+        a {
+          color: #a2b2bd;
+
+          &:hover {
+            color: #106fb3;
+          }
+        }
+      }
+    }
+
+    .share {
+      display: inline-block;
+      overflow: hidden;
+      font-size: 0;
+      height: 100%;
+      padding-left: 5px;
+
+      .share-img {
+        background: @dark-gray;
+        display: inline-block;
+        padding: 5px;
+        overflow: hidden;
+
+        img {
+          height: 12px;
+        }
+      }
+
+      .share-text {
+        display: inline-block;
+        background: @light-gray;
+        overflow: hidden;
+
+        p {
+          margin: 0;
+          padding: 1px 10px;
+          font-size: 10px;
+          color: @white;
+        }
+      }
     }
 
     p {
-      padding-left: 0;
+      margin: 0;
+      padding: 10px 0;
       font-size: 12px;
-      line-height: 18px;
+      line-height: 20px;
+      color: #5d676e;
+
+      a {
+        color: #a2b2bd;
+
+        &:hover {
+          color: #106fb3;
+        }
+      }
     }
 
     blockquote {
@@ -118,6 +189,7 @@ header {
       font-size: 30px;
       padding-left: 10px;
       margin-left: 0;
+      color: #106fb3;
     }
   }
 
@@ -132,12 +204,13 @@ header {
     img {
       max-width: 250px;
       display: block;
-      margin: 30px auto 10px auto;
+      margin: 30px auto 5px auto;
     }
 
     h3 {
       font-family: Oswald, Helvetica, Arial, sans-serif;
       margin-bottom: 0;
+      color: #106fb3;
     }
     
     h4 {
@@ -149,7 +222,7 @@ header {
     }
 
     .social {
-      padding: 0;
+      padding: 0 0 15px 0;
       margin: 0;
       text-align: center;
       display: block;
@@ -190,11 +263,11 @@ footer {
   h1 {
     text-align: center;
     font-size: 4em;
-    color: @dark-color;
+    color: @dark-blue;
   }
 
   .more-posts {
-    background: @dark-color;
+    background: @dark-blue;
     max-height: 100%;
 
     ul {
@@ -213,12 +286,8 @@ footer {
         min-width: 200px;
         position: relative;
 
-        // &:hover {
-        //   color: @dark-color; 
-        // }
-
         span {
-          background: @dark-color;
+          background: @dark-blue;
           opacity: .8;
           height: 100%;
           width: 100%;
@@ -236,14 +305,13 @@ footer {
 
           span {
           position: absolute;
-          bottom: 0%;
-          left: 0%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
           font-size: 1.8em;
           font-weight: bold;
           text-align: left;
-          // padding-left: 10px;
-          // opacity: 1;
-          z-index: 100;
             
             h3 {
               position: absolute;
@@ -255,19 +323,7 @@ footer {
               color: black;
               opacity: .9;
             }
-            
           }
-        
-          // span {
-          //   position: absolute;
-          //   bottom: 0%;
-          //   left: 0%;
-          //   font-size: 1.8em;
-          //   font-weight: bold;
-          //   color: #000724;
-          //   text-align: left;
-          //   padding-left: 10px;
-          //   opacity: 1;
         }
       } 
     }  
@@ -275,7 +331,7 @@ footer {
 
   .footernav {
     height: 100%;
-    background: @dark-color;
+    background: @dark-blue;
     color: #a2b2bd;
     overflow: hidden;
 
