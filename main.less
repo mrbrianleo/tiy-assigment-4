@@ -15,6 +15,10 @@ figcaption {
   text-align: right;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+}
+
 header {
   font-family: Oswald, Helvetica, Arial, sans-serif;
   background: url(img/header.jpg);
@@ -22,7 +26,7 @@ header {
   background-position: center;
   background-size: cover;
   // border: 1px solid red;
-  height: 500px;
+  // height: 500px;
   color: @dark-color;
   position: relative;
 
@@ -57,9 +61,10 @@ header {
 
   .headline {
     position: relative;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // top: 35%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    padding: 12% 0;
     text-align: center;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     
@@ -82,21 +87,46 @@ header {
 
 .content {
   overflow: hidden;
-  width: 80%;
+  width: 65%;
   margin: auto;
   padding: 30px;
   color: @dark-color;
 
   .left {
-    background: red;
-    width: calc(~'100% - 250px');
+    // background: red;
+    width: calc(~'90% - 250px');
     float: left;
+
+    h1 {
+      margin-top: 0;
+      font-size: 50px;
+    }
+
+    .author {
+      display: block;
+    }
+
+    p {
+      padding-left: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    blockquote {
+      border-left: 1px solid #a2b2bd;
+      font-size: 30px;
+      padding-left: 10px;
+      margin-left: 0;
+    }
   }
+
+
 
   .right {
     width: 250px;
     float: right;
     font-size: .8em;
+    padding-left: 10%;
 
     img {
       max-width: 250px;
