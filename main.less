@@ -11,6 +11,10 @@ p {
         padding-left: 10px;
       }
 
+figcaption {
+  text-align: right;
+}
+
 header {
   font-family: Oswald, Helvetica, Arial, sans-serif;
   background: url(img/header.jpg);
@@ -57,6 +61,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     
     p {
       margin-top: 0;
@@ -84,14 +89,62 @@ header {
 
   .left {
     background: red;
-    width: calc(100% - 250px);
+    width: calc(~'100% - 250px');
     float: left;
   }
 
   .right {
-    background: green;
     width: 250px;
     float: right;
+    font-size: .8em;
+
+    img {
+      max-width: 250px;
+      display: block;
+      margin: 30px auto 10px auto;
+    }
+
+    h3 {
+      font-family: Oswald, Helvetica, Arial, sans-serif;
+      margin-bottom: 0;
+    }
+    
+    h4 {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0;
+      text-align: center;
+      color: #106fb3;
+    }
+
+    .social {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      display: block;
+      font-size: .8em;
+
+      a {
+        text-decoration: none;
+        padding-right: 10px;
+      }
+    }
+
+    a {
+      color: #a2b2bd;
+
+      &:hover {
+        color: #106fb3;
+      }
+    }
+
+    p {
+      font-size: .8em;
+      padding-left: 0;
+      line-height: 1.8em;
+      color: #a2b2bd;
+
+    }
   }
 }
 
@@ -100,6 +153,8 @@ footer {
   border-top: 1px solid #ccc;
   background: white;
   clear: both;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+
 
   h1 {
     text-align: center;
@@ -108,41 +163,83 @@ footer {
   }
 
   .more-posts {
-      background: black;
-      max-height: 100%;
-      font-family: Oswald, Helvetica, Arial, sans-serif;
+    background: @dark-color;
+    max-height: 100%;
 
-      ul {
-        margin: 0;
-        padding: 0;
-        font-size: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
 
-        * {
-          font-size: 16px;
-        }
-      
-        li {
-          display: inline-block;
-          text-align: center;
-          width: 25%;
-          min-width: 200px;
-          position: relative;
+      * {
+        font-size: 16px;
+      }
+    
+      li {
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        min-width: 200px;
+        position: relative;
+
+        // &:hover {
+        //   color: @dark-color; 
+        // }
+
+        span {
+          background: @dark-color;
+          opacity: .8;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
 
           img {
             width: 100%;
           }
+        }
+
+        a {
+          color: @white;
 
           span {
-            position: absolute;
-            bottom: 3%;
-            left: 3%;
-            font-size: 1.8em;
-            font-weight: bold;
-            color: @white;
-            text-align: left;
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
+          font-size: 1.8em;
+          font-weight: bold;
+          text-align: left;
+          // padding-left: 10px;
+          // opacity: 1;
+          z-index: 100;
+            
+            h3 {
+              position: absolute;
+              bottom: 2%;
+              margin: 0;
+              padding-left: 10px;
+              font-size: 1.2em;
+              vertical-align: bottom;
+              color: black;
+              opacity: .9;
+            }
+            
           }
-        } 
-      }  
+        
+          // span {
+          //   position: absolute;
+          //   bottom: 0%;
+          //   left: 0%;
+          //   font-size: 1.8em;
+          //   font-weight: bold;
+          //   color: #000724;
+          //   text-align: left;
+          //   padding-left: 10px;
+          //   opacity: 1;
+        }
+      } 
+    }  
   }
 
   .footernav {
@@ -156,6 +253,7 @@ footer {
       width: 80%;
       margin: auto;
       font-size: .8em;
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
       img {
         float: left;
