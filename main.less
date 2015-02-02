@@ -9,10 +9,14 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;   
 }
 
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
+
 p {
-        display: inline-block;
-        padding-left: 10px;
-      }
+  display: inline-block;
+  padding-left: 10px;
+}
 
 figcaption {
   text-align: right;
@@ -107,7 +111,7 @@ header {
     .author {
       font-size: 10px;
       display: inline-block;
-      color: #106fb3;
+      color: @med-blue;
       height: 25px;
       line-height: 25px;
 
@@ -122,15 +126,15 @@ header {
       }
 
       span {
-        color: #a2b2bd;
+        color: @light-gray;
         float: left;
         padding-left: 10px;
 
         a {
-          color: #a2b2bd;
+          color: @light-gray;
 
           &:hover {
-            color: #106fb3;
+            color: @med-blue;
           }
         }
       }
@@ -173,23 +177,23 @@ header {
       padding: 10px 0;
       font-size: 12px;
       line-height: 20px;
-      color: #5d676e;
+      color: @dark-gray;
 
       a {
-        color: #a2b2bd;
+        color: @light-gray;
 
         &:hover {
-          color: #106fb3;
+          color: @med-blue;
         }
       }
     }
 
     blockquote {
-      border-left: 1px solid #a2b2bd;
+      border-left: 1px solid @light-gray;
       font-size: 30px;
       padding-left: 10px;
       margin-left: 0;
-      color: #106fb3;
+      color: @med-blue;
     }
   }
 
@@ -210,7 +214,7 @@ header {
     h3 {
       font-family: Oswald, Helvetica, Arial, sans-serif;
       margin-bottom: 0;
-      color: #106fb3;
+      color: @med-blue;
     }
     
     h4 {
@@ -218,7 +222,7 @@ header {
       margin: 0;
       margin-bottom: 0;
       text-align: center;
-      color: #106fb3;
+      color: @med-blue;
     }
 
     .social {
@@ -235,10 +239,10 @@ header {
     }
 
     a {
-      color: #a2b2bd;
+      color: @light-gray;
 
       &:hover {
-        color: #106fb3;
+        color: @med-blue;
       }
     }
 
@@ -246,7 +250,7 @@ header {
       font-size: .8em;
       padding-left: 0;
       line-height: 1.8em;
-      color: #a2b2bd;
+      color: @light-gray;
 
     }
   }
@@ -267,73 +271,47 @@ footer {
   }
 
   .more-posts {
-    background: @dark-blue;
-    max-height: 100%;
+    float: left;
+    position: relative;
+    color: @dark-blue;
+    font-size: 0;
+    width: 25%;
 
-    ul {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(16, 109, 179, .8);
+    }
+
+    h2 {
+      position: absolute;
+      bottom: 12px;
+      left: 18px;
+      font-size: 31px;
       margin: 0;
-      padding: 0;
-      font-size: 0;
+      color: @dark-blue;
+      z-index: 100;
+    }
 
-      * {
-        font-size: 16px;
-      }
-    
-      li {
-        display: inline-block;
-        text-align: center;
-        width: 25%;
-        min-width: 200px;
-        position: relative;
+    &:hover:after {
+      background-color: rgba(16, 109, 179, .0);
+    }
 
-        span {
-          background: @dark-blue;
-          opacity: .8;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-
-          img {
-            width: 100%;
-          }
-        }
-
-        a {
-          color: @white;
-
-          span {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          font-size: 1.8em;
-          font-weight: bold;
-          text-align: left;
-            
-            h3 {
-              position: absolute;
-              bottom: 2%;
-              margin: 0;
-              padding-left: 10px;
-              font-size: 1.2em;
-              vertical-align: bottom;
-              color: black;
-              opacity: .9;
-            }
-          }
-        }
-      } 
-    }  
+    &:hover h2 {
+      color: @white;
+    }
   }
 
   .footernav {
     height: 100%;
     background: @dark-blue;
-    color: #a2b2bd;
+    color: @light-gray;
     overflow: hidden;
+    clear: both;
 
     .footernav-contact {
       padding: 20px;
@@ -353,7 +331,7 @@ footer {
           border: none;
           padding: 0 5px;
           display: inline-block;
-          border-left: 1px solid #a2b2bd;
+          border-left: 1px solid @light-gray;
 
           &:first-child {
             border-left: none;
